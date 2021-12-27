@@ -8,3 +8,11 @@ function listArray (start, end) {
     }
     return newArray;
 };
+
+function sumArray (array) {
+    let total = 0;
+    for (const number of array) {
+        total += number;
+    }
+    return total;
+};
