@@ -1,13 +1,8 @@
-function arrayToList(arr) {
-    let list = {};
-    list.value = arr.length;
-    list.rest = null;
-    arr.pop();
-    newLength = arr.length;
-    for(let i = (newLength - 1); i >= 0; i--) {
-        let newObj = {};
-        new.value = (i + 1);
-        new.rest = list;
+function arrayToList(array) {
+    let list = null;
+    for (let i = array.length; i > 0; i--) {
+        let useValue = array[(i - 1)];
+        list = {value: useValue, rest: list};
     }
     return list;
-};
+}
