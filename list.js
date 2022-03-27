@@ -6,3 +6,11 @@ function arrayToList(array) {
     }
     return list;
 }
+
+function listToArray(list) {
+    let newArray = [];
+    for(let node = list; node; node = node.rest) {
+        newArray.push(node.value);
+    }
+    return newArray;
+}
